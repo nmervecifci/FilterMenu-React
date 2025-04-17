@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import items from "./data";
 import Menu from "./Menu";
 import Categories from "./Categories";
-import Title from "./Title";
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 const App = () => {
   const [menuItems, setMenuItems] = useState(items);
@@ -18,7 +17,6 @@ const App = () => {
 
   return (
     <div>
-      <Title text="our menu" />
       <Categories categories={categories} filterItems={filterItems} />
       <Menu items={menuItems} />
     </div>
